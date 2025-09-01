@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Link, useNavigate, useSearchParams} from 'react-router-dom';
 import { Bot, Mail, Lock, User, Briefcase } from 'lucide-react';
 
-function RegisterPage() {
+export default function RegisterPage() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -25,7 +25,6 @@ function RegisterPage() {
         console.log('Registering with:', { email, password, role });
         const newUser = { email, password, role };
         localStorage.setItem('user', JSON.stringify(newUser));
-
         alert('Registration successful! Please log in.');
         navigate('/login');
     };
