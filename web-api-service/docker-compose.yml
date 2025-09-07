@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: userDB
+      POSTGRES_USER: hubuser
+      POSTGRES_PASS: hubpass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - "hirehub-net"
+    restart: always
+
+  authservice:
+    build:
+      context: authservice
+      dockerfile: DockerFile
+    container_name: auth-service
+    depends_on:
+      - postgres
+    networks:
+      - "hirehub-net"
+    restart: always
+
+volumes:
+  pgdata:
+
+networks:
+  hirehub-net:
+    name: hirehub-networks
+    driver: bridge
