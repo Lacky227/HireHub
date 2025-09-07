@@ -23,6 +23,11 @@ services:
     container_name: auth-service
     depends_on:
       - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/userDB
+      SPRING_DATASOURCE_USERNAME: shopuser
+      SPRING_DATASOURCE_PASSWORD: shoppass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
     networks:
       - "hirehub-net"
     restart: always
