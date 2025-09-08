@@ -6,6 +6,7 @@ import com.fullstackfamily.authservice.dto.RegisterRequest;
 import com.fullstackfamily.authservice.models.User;
 import com.fullstackfamily.authservice.repository.AuthRepository;
 import com.fullstackfamily.authservice.service.AuthService;
+import com.fullstackfamily.authservice.service.JwtService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class AuthServiceImpl implements AuthService {
     private final AuthRepository authRepository;
+    private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
 
     @Override
@@ -32,7 +34,10 @@ public class AuthServiceImpl implements AuthService {
                     .status(HttpStatus.UNAUTHORIZED)
                     .body(new MessageResponse("Invalid email or password"));
         }
-        return ResponseEntity.ok(new MessageResponse("Login successful"));
+        return ResponseEntity.ok(new MessageResponse(
+                jwtService.generateJwtToken(
+                        user.get().getEmail(),
+                        user.get().getRole().toString())));
     }
 
     @Override
@@ -49,6 +54,9 @@ public class AuthServiceImpl implements AuthService {
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
         user.setRole(registerRequest.getRole());
         authRepository.save(user);
-        return ResponseEntity.ok(new MessageResponse("User registered successfully"));
+        return ResponseEntity.ok(new MessageResponse(
+                jwtService.generateJwtToken(
+                        user.getEmail(),
+                        user.getRole().toString())));
     }
 }
