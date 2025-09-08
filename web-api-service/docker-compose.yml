@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_DB: userDB
       POSTGRES_USER: hubuser
-      POSTGRES_PASS: hubpass
+      POSTGRES_PASSWORD: hubpass
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
@@ -18,14 +18,14 @@ services:
     build:
       context: authservice
       dockerfile: DockerFile
-    container_name: auth-service
+    container_name: authservice
     depends_on:
       - postgres
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/userDB
-      SPRING_DATASOURCE_USERNAME: shopuser
-      SPRING_DATASOURCE_PASSWORD: shoppass
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_DATASOURCE_USERNAME: hubuser
+      SPRING_DATASOURCE_PASSWORD: hubpass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create
     networks:
       - "hirehub-net"
     restart: always
