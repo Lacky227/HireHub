@@ -14,6 +14,17 @@ services:
       - "hirehub-net"
     restart: always
 
+  apigateway:
+    build:
+      context: api-gateway
+      dockerfile: DockerFile
+    container_name: apigateway
+    ports:
+      - "8080:8080"
+    networks:
+      - "hirehub-net"
+    restart: always
+
   authservice:
     build:
       context: authservice
@@ -27,8 +38,6 @@ services:
       SPRING_DATASOURCE_PASSWORD: hubpass
       SPRING_JPA_HIBERNATE_DDL_AUTO: create
       JWT_SECRET: 3F1F6A0A2B4E6F8C9D0E11223344556677889900AABBCCDDEEFF001122334455
-    ports:
-      - "8081:8081"
     networks:
       - "hirehub-net"
     restart: always
