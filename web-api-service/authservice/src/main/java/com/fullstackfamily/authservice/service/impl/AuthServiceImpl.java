@@ -1,5 +1,6 @@
 package com.fullstackfamily.authservice.service.impl;
 
+import com.fullstackfamily.authservice.dto.AuthResponse;
 import com.fullstackfamily.authservice.dto.LoginRequest;
 import com.fullstackfamily.authservice.dto.MessageResponse;
 import com.fullstackfamily.authservice.dto.RegisterRequest;
@@ -23,7 +24,7 @@ public class AuthServiceImpl implements AuthService {
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public ResponseEntity<MessageResponse> login(LoginRequest loginRequest) {
+    public ResponseEntity<?> login(LoginRequest loginRequest) {
         Optional<User> user = authRepository.findByEmail(loginRequest.getEmail());
         if (user.isEmpty()) {
             return ResponseEntity
@@ -34,14 +35,13 @@ public class AuthServiceImpl implements AuthService {
                     .status(HttpStatus.UNAUTHORIZED)
                     .body(new MessageResponse("Invalid email or password"));
         }
-        return ResponseEntity.ok(new MessageResponse(
-                jwtService.generateJwtToken(
-                        user.get().getEmail(),
-                        user.get().getRole().toString())));
+        return ResponseEntity.ok(new AuthResponse(
+                jwtService.generateJwtToken(user.get().getEmail(), user.get().getRole().toString()),
+                user.get().getRole().toString()));
     }
 
     @Override
-    public ResponseEntity<MessageResponse> register(RegisterRequest registerRequest) {
+    public ResponseEntity<?> register(RegisterRequest registerRequest) {
         if (authRepository.existsByEmail(registerRequest.getEmail())) {
             return ResponseEntity
                     .status(HttpStatus.CONFLICT)
@@ -54,9 +54,8 @@ public class AuthServiceImpl implements AuthService {
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
         user.setRole(registerRequest.getRole());
         authRepository.save(user);
-        return ResponseEntity.ok(new MessageResponse(
-                jwtService.generateJwtToken(
-                        user.getEmail(),
-                        user.getRole().toString())));
+        return ResponseEntity.ok(new AuthResponse(
+                jwtService.generateJwtToken(user.getEmail(), user.getRole().toString()),
+                user.getRole().toString()));
     }
 }

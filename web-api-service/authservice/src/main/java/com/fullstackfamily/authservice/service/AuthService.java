@@ -6,6 +6,6 @@ import com.fullstackfamily.authservice.dto.RegisterRequest;
 import org.springframework.http.ResponseEntity;
 
 public interface AuthService {
-    ResponseEntity<MessageResponse> login(LoginRequest loginRequest);
-    ResponseEntity<MessageResponse> register(RegisterRequest registerRequest);
+    ResponseEntity<?> login(LoginRequest loginRequest);
+    ResponseEntity<?> register(RegisterRequest registerRequest);
 }
