@@ -8,6 +8,7 @@ import com.fullstackfamily.authservice.models.User;
 import com.fullstackfamily.authservice.repository.AuthRepository;
 import com.fullstackfamily.authservice.service.AuthService;
 import com.fullstackfamily.authservice.service.JwtService;
+import com.fullstackfamily.authservice.utility.UUIDUtility;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +38,7 @@ public class AuthServiceImpl implements AuthService {
         }
         return ResponseEntity.ok(new AuthResponse(
                 jwtService.generateJwtToken(user.get().getEmail(), user.get().getRole().toString()),
+                UUIDUtility.getUUID(),
                 user.get().getRole().toString()));
     }
 
@@ -56,6 +58,7 @@ public class AuthServiceImpl implements AuthService {
         authRepository.save(user);
         return ResponseEntity.ok(new AuthResponse(
                 jwtService.generateJwtToken(user.getEmail(), user.getRole().toString()),
+                UUIDUtility.getUUID(),
                 user.getRole().toString()));
     }
 }
