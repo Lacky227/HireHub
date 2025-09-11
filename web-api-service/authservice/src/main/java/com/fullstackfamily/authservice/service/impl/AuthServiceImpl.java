@@ -39,7 +39,7 @@ public class AuthServiceImpl implements AuthService {
                     .body(new MessageResponse("Invalid email or password"));
         }
 
-        String newAccessToken = jwtService.generateJwtToken(
+        String accessToken = jwtService.generateJwtToken(
                 user.get().getEmail(),
                 user.get().getRole().toString());
         String refreshToken = UUIDUtility.getUUID();
@@ -47,9 +47,7 @@ public class AuthServiceImpl implements AuthService {
         authRepository.save(user.get());
 
         return ResponseEntity.ok(new AuthResponse(
-                jwtService.generateJwtToken(
-                        user.get().getEmail(),
-                        user.get().getRole().toString()),
+                accessToken,
                 refreshToken,
                 user.get().getRole().toString()));
     }
@@ -68,7 +66,7 @@ public class AuthServiceImpl implements AuthService {
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
         user.setRole(registerRequest.getRole());
 
-        String newAccessToken = jwtService.generateJwtToken(
+        String accessToken = jwtService.generateJwtToken(
                 user.getEmail(),
                 user.getRole().toString());
         String refreshToken = UUIDUtility.getUUID();
@@ -76,14 +74,14 @@ public class AuthServiceImpl implements AuthService {
         authRepository.save(user);
 
         return ResponseEntity.ok(new AuthResponse(
-                newAccessToken,
+                accessToken,
                 refreshToken,
                 user.getRole().toString()));
     }
 
     @Override
-    public ResponseEntity<?> refresh(String refreshToken) {
-        Optional<Token> oldToken = tokenRepository.findByToken(refreshToken);
+    public ResponseEntity<?> refresh(RefreshTokenRequest refreshTokenRequest) {
+        Optional<Token> oldToken = tokenRepository.findByToken(refreshTokenRequest.getRefreshToken());
         if (oldToken.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid token");
         } else if (oldToken.get().getRevoked() || oldToken.get().getExpiredAt().isBefore(LocalDateTime.now())) {
