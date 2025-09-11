@@ -2,6 +2,7 @@ package com.fullstackfamily.authservice.controller;
 
 import com.fullstackfamily.authservice.dto.LoginRequest;
 import com.fullstackfamily.authservice.dto.MessageResponse;
+import com.fullstackfamily.authservice.dto.RefreshTokenRequest;
 import com.fullstackfamily.authservice.dto.RegisterRequest;
 import com.fullstackfamily.authservice.service.AuthService;
 import lombok.AllArgsConstructor;
@@ -24,5 +25,9 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequest registerRequest) {
         return authService.register(registerRequest);
+    }
+    @PostMapping("/refresh")
+    public ResponseEntity<?> refresh(@RequestBody RefreshTokenRequest refreshTokenRequest) {
+        return authService.refresh(refreshTokenRequest);
     }
 }
