@@ -8,4 +8,5 @@ import org.springframework.http.ResponseEntity;
 public interface AuthService {
     ResponseEntity<?> login(LoginRequest loginRequest);
     ResponseEntity<?> register(RegisterRequest registerRequest);
+    ResponseEntity<?> refresh(String refreshToken);
 }
