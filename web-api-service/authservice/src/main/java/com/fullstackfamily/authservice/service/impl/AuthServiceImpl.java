@@ -4,6 +4,7 @@ import com.fullstackfamily.authservice.dto.AuthResponse;
 import com.fullstackfamily.authservice.dto.LoginRequest;
 import com.fullstackfamily.authservice.dto.MessageResponse;
 import com.fullstackfamily.authservice.dto.RegisterRequest;
+import com.fullstackfamily.authservice.models.Token;
 import com.fullstackfamily.authservice.models.User;
 import com.fullstackfamily.authservice.repository.AuthRepository;
 import com.fullstackfamily.authservice.service.AuthService;
@@ -15,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -36,9 +38,18 @@ public class AuthServiceImpl implements AuthService {
                     .status(HttpStatus.UNAUTHORIZED)
                     .body(new MessageResponse("Invalid email or password"));
         }
+        Token token = new Token();
+        String tokenStr = UUIDUtility.getUUID();
+        token.setToken(tokenStr);
+        token.setCreatedAt(LocalDateTime.now());
+        token.setExpiredAt(LocalDateTime.now().plusDays(30));
+        token.setRevoked(false);
+        user.get().getTokens().add(token);
+        authRepository.save(user.get());
+
         return ResponseEntity.ok(new AuthResponse(
                 jwtService.generateJwtToken(user.get().getEmail(), user.get().getRole().toString()),
-                UUIDUtility.getUUID(),
+                token.getToken(),
                 user.get().getRole().toString()));
     }
 
@@ -55,10 +66,19 @@ public class AuthServiceImpl implements AuthService {
         user.setEmail(registerRequest.getEmail());
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
         user.setRole(registerRequest.getRole());
+
+        String tokenStr = UUIDUtility.getUUID();
+        Token token = new Token();
+        token.setToken(tokenStr);
+        token.setCreatedAt(LocalDateTime.now());
+        token.setExpiredAt(LocalDateTime.now().plusDays(30));
+        token.setRevoked(false);
+        user.addToken(token);
+
         authRepository.save(user);
         return ResponseEntity.ok(new AuthResponse(
                 jwtService.generateJwtToken(user.getEmail(), user.getRole().toString()),
-                UUIDUtility.getUUID(),
+                tokenStr,
                 user.getRole().toString()));
     }
 }
