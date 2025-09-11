@@ -3,6 +3,9 @@ package com.fullstackfamily.authservice.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "users")
@@ -17,6 +20,9 @@ public class User {
     private String email;
     private String password;
 
+    @Enumerated(EnumType.STRING)
     private UserRole role;
-    private String refreshToken;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<Token> tokens =  new ArrayList<>();
 }
