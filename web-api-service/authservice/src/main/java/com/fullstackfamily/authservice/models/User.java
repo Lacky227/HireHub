@@ -25,4 +25,9 @@ public class User {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Token> tokens =  new ArrayList<>();
+
+    public void addToken(Token token) {
+        tokens.add(token);
+        token.setUser(this);
+    }
 }
