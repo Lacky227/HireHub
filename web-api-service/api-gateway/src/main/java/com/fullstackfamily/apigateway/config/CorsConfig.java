@@ -16,7 +16,7 @@ public class CorsConfig {
         return (ServerWebExchange exchange, WebFilterChain chain) -> {
             String origin = exchange.getRequest().getHeaders().getOrigin();
 
-            if (origin != null && origin.contains("localhost")) {
+            if (origin != null && (origin.contains("localhost") || origin.contains("hirehub"))) {
                 exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, origin);
                 exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "GET, POST, PUT, DELETE, OPTIONS, HEAD");
                 exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, "Content-Type, Authorization");
