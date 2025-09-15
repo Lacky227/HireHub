@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/auth',
+    baseURL: 'https://483b0114e2ca.ngrok-free.app/auth',
 });
 
 export const registerUser = (userData) => {
