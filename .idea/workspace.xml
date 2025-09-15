@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7b14ca9-32a8-4c9a-be45-b075c9e1b7aa" name="Changes" comment="refactor:" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Dockerfile" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="JSX File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release/0.1.0" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lacky227&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lacky227/HireHub.git&quot;,
+    &quot;accountId&quot;: &quot;4ba02ba0-e565-4fb5-bacd-1a09c2c13729&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="323tQf3AJdWhNUHQCAWvwpok7Lu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.authservice/Dockerfile.executor": "Run",
+    "Docker.web-api-service.authservice: Compose Deployment.executor": "Run",
+    "Docker.web-api-service.postgres: Compose Deployment.executor": "Run",
+    "Docker.web-api-service: Compose Deployment.executor": "Run",
+    "JUnit.AuthServiceTest.givenValidCredentials_login_shouldReturnAuthResponse.executor": "Run",
+    "Maven.api-gateway [clean].executor": "Run",
+    "Maven.authservice [clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "/home/artur/.local/share/JetBrains/IntelliJIdea2025.2/Shell Script/shellcheck",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/artur/IdeaProjects/HireHub",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.rainbow.brackets.lite",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-api-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ml-service/generate" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.web-api-service: Compose Deployment">
+    <configuration name="AuthServiceTest.givenValidCredentials_login_shouldReturnAuthResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fullstackfamily.authservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fullstackfamily.authservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.fullstackfamily.authservice.service.AuthServiceTest" />
+      <option name="METHOD_NAME" value="givenValidCredentials_login_shouldReturnAuthResponse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fullstackfamily.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fullstackfamily.authservice.AuthserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fullstackfamily.authservice.AuthserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="authservice/DockerFile: Compose Deployment" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="web-api-service/authservice/DockerFile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="web-api-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="web-api-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="web-api-service.authservice: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="authservice" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="web-api-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="web-api-service.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="web-api-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AuthServiceTest.givenValidCredentials_login_shouldReturnAuthResponse" />
+        <item itemvalue="Docker.web-api-service: Compose Deployment" />
+        <item itemvalue="Docker.web-api-service.postgres: Compose Deployment" />
+        <item itemvalue="Docker.web-api-service.authservice: Compose Deployment" />
+        <item itemvalue="Docker.authservice/DockerFile: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7b14ca9-32a8-4c9a-be45-b075c9e1b7aa" name="Changes" comment="" />
+      <created>1756661069403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756661069403</updated>
+      <workItem from="1756661071051" duration="303000" />
+      <workItem from="1756729584461" duration="2777000" />
+      <workItem from="1756735873894" duration="363000" />
+      <workItem from="1756736325230" duration="59000" />
+      <workItem from="1756736406750" duration="6834000" />
+      <workItem from="1756794628156" duration="1433000" />
+      <workItem from="1756924855759" duration="1579000" />
+      <workItem from="1756933098317" duration="660000" />
+      <workItem from="1756968497412" duration="1523000" />
+      <workItem from="1757271162686" duration="2303000" />
+      <workItem from="1757273686688" duration="7030000" />
+      <workItem from="1757360766855" duration="7635000" />
+      <workItem from="1757450373534" duration="11016000" />
+      <workItem from="1757605296735" duration="12442000" />
+      <workItem from="1757691161657" duration="5258000" />
+      <workItem from="1757701505105" duration="21728000" />
+      <workItem from="1757787816981" duration="1494000" />
+      <workItem from="1757851214730" duration="10562000" />
+      <workItem from="1757968909960" duration="175000" />
+      <workItem from="1757969091563" duration="153000" />
+    </task>
+    <task id="LOCAL-00029" summary="feat: add logic login and register">
+      <option name="closed" value="true" />
+      <created>1757364839991</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1757364839991</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: create controller and add endpoints">
+      <option name="closed" value="true" />
+      <created>1757364986370</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1757364986370</updated>
+    </task>
+    <task id="LOCAL-00031" summary="chore: add dependencies for JWT">
+      <option name="closed" value="true" />
+      <created>1757365303566</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1757365303566</updated>
+    </task>
+    <task id="LOCAL-00032" summary="chore: add secret key">
+      <option name="closed" value="true" />
+      <created>1757366012622</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1757366012622</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: create jwt service and create generate token method">
+      <option name="closed" value="true" />
+      <created>1757366054970</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1757366054970</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat: add return jwt token">
+      <option name="closed" value="true" />
+      <created>1757366232539</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1757366232539</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix: rename bean filter chain">
+      <option name="closed" value="true" />
+      <created>1757366444303</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1757366444303</updated>
+    </task>
+    <task id="LOCAL-00036" summary="chore: add ports">
+      <option name="closed" value="true" />
+      <created>1757366521506</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1757366521506</updated>
+    </task>
+    <task id="LOCAL-00037" summary="featL create api gateway">
+      <option name="closed" value="true" />
+      <created>1757366924931</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1757366924931</updated>
+    </task>
+    <task id="LOCAL-00038" summary="chore: reactor gateway dependency">
+      <option name="closed" value="true" />
+      <created>1757367192180</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1757367192180</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat: create config for adjust route to service">
+      <option name="closed" value="true" />
+      <created>1757367443157</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1757367443157</updated>
+    </task>
+    <task id="LOCAL-00040" summary="chore: change port">
+      <option name="closed" value="true" />
+      <created>1757367793884</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1757367793884</updated>
+    </task>
+    <task id="LOCAL-00041" summary="chore: add api-gateway and remove port for auth-service">
+      <option name="closed" value="true" />
+      <created>1757367843458</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1757367843458</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix: change name snapshot">
+      <option name="closed" value="true" />
+      <created>1757368006457</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1757368006457</updated>
+    </task>
+    <task id="LOCAL-00043" summary="chore: add dependency webflux">
+      <option name="closed" value="true" />
+      <created>1757368282544</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1757368282544</updated>
+    </task>
+    <task id="LOCAL-00044" summary="chore: remove erica dependency">
+      <option name="closed" value="true" />
+      <created>1757368456087</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1757368456087</updated>
+    </task>
+    <task id="LOCAL-00045" summary="chore: update dependency gateway">
+      <option name="closed" value="true" />
+      <created>1757508251461</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1757508251461</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix: change path to permit all">
+      <option name="closed" value="true" />
+      <created>1757508284806</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1757508284806</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feat: create dto for auth info response">
+      <option name="closed" value="true" />
+      <created>1757508684720</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1757508684720</updated>
+    </task>
+    <task id="LOCAL-00048" summary="refactor: change response to wildcard and add response token and role">
+      <option name="closed" value="true" />
+      <created>1757509136183</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1757509136183</updated>
+    </task>
+    <task id="LOCAL-00049" summary="feat: add variable for save refresh token">
+      <option name="closed" value="true" />
+      <created>1757510577563</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1757510577563</updated>
+    </task>
+    <task id="LOCAL-00050" summary="refactor: davide token to access and refresh token">
+      <option name="closed" value="true" />
+      <created>1757511779941</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1757511779942</updated>
+    </task>
+    <task id="LOCAL-00051" summary="feat: create utility class for generate token">
+      <option name="closed" value="true" />
+      <created>1757512104349</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1757512104349</updated>
+    </task>
+    <task id="LOCAL-00052" summary="refactor: change response">
+      <option name="closed" value="true" />
+      <created>1757512128451</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1757512128451</updated>
+    </task>
+    <task id="LOCAL-00053" summary="refactor: change save tokens and add save role like string">
+      <option name="closed" value="true" />
+      <created>1757617638974</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1757617638975</updated>
+    </task>
+    <task id="LOCAL-00054" summary="feat: add method for add token for user">
+      <option name="closed" value="true" />
+      <created>1757617911233</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1757617911233</updated>
+    </task>
+    <task id="LOCAL-00055" summary="feat: add save token">
+      <option name="closed" value="true" />
+      <created>1757619269284</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1757619269284</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat: create repository for token and add method for search token">
+      <option name="closed" value="true" />
+      <created>1757619509490</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1757619509490</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat: create for response access token">
+      <option name="closed" value="true" />
+      <created>1757620439486</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1757620439486</updated>
+    </task>
+    <task id="LOCAL-00058" summary="refactor: remove refresh response and change auth response">
+      <option name="closed" value="true" />
+      <created>1757622112142</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1757622112142</updated>
+    </task>
+    <task id="LOCAL-00059" summary="feat: add variable role">
+      <option name="closed" value="true" />
+      <created>1757622518056</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1757622518056</updated>
+    </task>
+    <task id="LOCAL-00060" summary="feat: add token refresh and improve token creation logic">
+      <option name="closed" value="true" />
+      <created>1757622974126</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1757622974126</updated>
+    </task>
+    <task id="LOCAL-00061" summary="feat: create refresh token request">
+      <option name="closed" value="true" />
+      <created>1757623578478</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1757623578478</updated>
+    </task>
+    <task id="LOCAL-00062" summary="refactor: rename access token and change request in refresh method">
+      <option name="closed" value="true" />
+      <created>1757623832241</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1757623832241</updated>
+    </task>
+    <task id="LOCAL-00063" summary="feat: create refresh endpoint">
+      <option name="closed" value="true" />
+      <created>1757623878076</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1757623878076</updated>
+    </task>
+    <task id="LOCAL-00064" summary="refactor: change minute live">
+      <option name="closed" value="true" />
+      <created>1757624216862</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1757624216862</updated>
+    </task>
+    <task id="LOCAL-00065" summary="feat: create constructor">
+      <option name="closed" value="true" />
+      <created>1757699932810</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1757699932811</updated>
+    </task>
+    <task id="LOCAL-00066" summary="feat: add Axios-based auth API client">
+      <option name="closed" value="true" />
+      <created>1757703728203</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1757703728203</updated>
+    </task>
+    <task id="LOCAL-00067" summary="feat: enhance RegisterPage with API integration and additional fields">
+      <option name="closed" value="true" />
+      <created>1757704284108</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1757704284108</updated>
+    </task>
+    <task id="LOCAL-00068" summary="feat: enhance LoginPage with API integration">
+      <option name="closed" value="true" />
+      <created>1757704788685</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1757704788685</updated>
+    </task>
+    <task id="LOCAL-00069" summary="feat: add CORS configuration">
+      <option name="closed" value="true" />
+      <created>1757705702852</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1757705702852</updated>
+    </task>
+    <task id="LOCAL-00070" summary="feat: create DashboardRouter for role-based routing">
+      <option name="closed" value="true" />
+      <created>1757754492699</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1757754492699</updated>
+    </task>
+    <task id="LOCAL-00071" summary="feat: enhanced user handling">
+      <option name="closed" value="true" />
+      <created>1757755166560</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1757755166560</updated>
+    </task>
+    <task id="LOCAL-00072" summary="feat: add route to dashboard">
+      <option name="closed" value="true" />
+      <created>1757756584903</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1757756584903</updated>
+    </task>
+    <task id="LOCAL-00073" summary="feat: add dependencies for tests">
+      <option name="closed" value="true" />
+      <created>1757866013779</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1757866013779</updated>
+    </task>
+    <task id="LOCAL-00074" summary="feat: create tests class and test methods and test postgres">
+      <option name="closed" value="true" />
+      <created>1757866085802</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1757866085802</updated>
+    </task>
+    <task id="LOCAL-00075" summary="feat: change ddl-auto to create-drop">
+      <option name="closed" value="true" />
+      <created>1757866183216</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1757866183216</updated>
+    </task>
+    <task id="LOCAL-00076" summary="feat: init project and create generator datasets">
+      <option name="closed" value="true" />
+      <created>1757866442361</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1757866442361</updated>
+    </task>
+    <task id="LOCAL-00077" summary="refactor: update url">
+      <option name="closed" value="true" />
+      <created>1757967410003</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1757967410003</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/feature/create-model" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor: change save tokens and add save role like string" />
+    <MESSAGE value="feat: add method for add token for user" />
+    <MESSAGE value="feat: add save token" />
+    <MESSAGE value="feat: create repository for token and add method for search token" />
+    <MESSAGE value="feat: create for response access token" />
+    <MESSAGE value="refactor: remove refresh response and change auth response" />
+    <MESSAGE value="feat: add variable role" />
+    <MESSAGE value="feat: add token refresh and improve token creation logic" />
+    <MESSAGE value="feat: create refresh token request" />
+    <MESSAGE value="refactor: rename access token and change request in refresh method" />
+    <MESSAGE value="feat: create refresh endpoint" />
+    <MESSAGE value="refactor: change minute live" />
+    <MESSAGE value="feat: create constructor" />
+    <MESSAGE value="feat: add Axios-based auth API client" />
+    <MESSAGE value="feat: enhance RegisterPage with API integration and additional fields" />
+    <MESSAGE value="feat: enhance LoginPage with API integration" />
+    <MESSAGE value="feat: add CORS configuration" />
+    <MESSAGE value="feat: create DashboardRouter for role-based routing" />
+    <MESSAGE value="feat: enhanced user handling" />
+    <MESSAGE value="feat: add route to dashboard" />
+    <MESSAGE value="feat: add dependencies for tests" />
+    <MESSAGE value="feat: create tests class and test methods and test postgres" />
+    <MESSAGE value="feat: change ddl-auto to create-drop" />
+    <MESSAGE value="feat: init project and create generator datasets" />
+    <MESSAGE value="refactor: update url" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: update url" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
