@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: userDB
+      POSTGRES_USER: hubuser
+      POSTGRES_PASSWORD: hubpass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - "hirehub-net"
+    restart: always
+
+  apigateway:
+    build:
+      context: api-gateway
+      dockerfile: DockerFile
+    container_name: apigateway
+    ports:
+      - "8080:8080"
+    networks:
+      - "hirehub-net"
+    restart: always
+
+  authservice:
+    build:
+      context: authservice
+      dockerfile: DockerFile
+    container_name: authservice
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/userDB
+      SPRING_DATASOURCE_USERNAME: hubuser
+      SPRING_DATASOURCE_PASSWORD: hubpass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create-drop
+      JWT_SECRET: 3F1F6A0A2B4E6F8C9D0E11223344556677889900AABBCCDDEEFF001122334455
+    networks:
+      - "hirehub-net"
+    restart: always
+
+volumes:
+  pgdata:
+
+networks:
+  hirehub-net:
+    name: hirehub-networks
+    driver: bridge
