@@ -10,6 +10,8 @@ export default function RegisterPage() {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const [messageType, setMessageType] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,9 +26,12 @@ export default function RegisterPage() {
 
     const handleRegister = async (e) => {
         e.preventDefault();
+        setMessage('');
 
         if (!role || !firstName || !lastName || !email || !password) {
-            alert('Please fill all fields');
+            setMessage('Please fill all fields');
+            setMessageType('error');
+            setTimeout(() => setMessage(''), 5000);
             return;
         }
 
@@ -45,15 +50,22 @@ export default function RegisterPage() {
             localStorage.setItem('refreshToken', refreshToken);
             localStorage.setItem('userRole', userRole);
 
-            alert('Registration successful!');
-            navigate('/login');
+            setMessage('Registration successful!');
+            setMessageType('success');
+            setTimeout(() => {
+                setMessage('');
+                navigate('/login');
+            }, 2000);
         } catch (err) {
             console.error(err);
             if (err.response?.status === 409) {
-                alert('Email already exists');
+                setMessage('Email already exists');
+                setMessageType('error');
             } else {
-                alert('Registration failed');
+                setMessage('Registration failed');
+                setMessageType('error');
             }
+            setTimeout(() => setMessage(''), 5000);
         }
     };
 
@@ -93,7 +105,6 @@ export default function RegisterPage() {
                                 </button>
                             </div>
                         </div>
-
                         <input
                             type="text"
                             placeholder="First Name"
@@ -139,6 +150,15 @@ export default function RegisterPage() {
                             Create Account
                         </button>
                     </form>
+                    {message && (
+                        <div
+                            className={`mt-4 p-3 rounded-lg text-center text-sm font-medium transition-all ${
+                                messageType === 'error' ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'
+                            }`}
+                        >
+                            {message}
+                        </div>
+                    )}
                     <p className="text-center text-gray-600 mt-6">
                         Already have an account?{' '}
                         <Link to="/login" className="font-semibold text-indigo-600 hover:underline">

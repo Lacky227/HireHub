@@ -6,10 +6,13 @@ import { loginUser } from '../services/api.js';
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const [messageType, setMessageType] = useState('');
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        setMessage('');
 
         try {
             const response = await loginUser({ email, password });
@@ -23,10 +26,13 @@ export default function LoginPage() {
         } catch (err) {
             console.error(err);
             if (err.response?.status === 401) {
-                alert('Invalid email or password');
+                setMessage('Invalid email or password');
+                setMessageType('error');
             } else {
-                alert('Login failed');
+                setMessage('Login failed');
+                setMessageType('error');
             }
+            setTimeout(() => setMessage(''), 5000);
         }
     };
 
@@ -70,6 +76,15 @@ export default function LoginPage() {
                             Login
                         </button>
                     </form>
+                    {message && (
+                        <div
+                            className={`mt-4 p-3 rounded-lg text-center text-sm font-medium transition-all ${
+                                messageType === 'error' ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'
+                            }`}
+                        >
+                            {message}
+                        </div>
+                    )}
                     <p className="text-center text-gray-600 mt-6">
                         Don't have an account?{' '}
                         <Link to="/register" className="font-semibold text-indigo-600 hover:underline">
