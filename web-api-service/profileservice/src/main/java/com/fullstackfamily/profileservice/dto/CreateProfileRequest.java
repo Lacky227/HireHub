@@ -32,6 +32,4 @@ public class CreateProfileRequest {
     private String linkedinUrl;
     private String githubUrl;
     private String portfolioUrl;
-    private String cvFileUrl;
-    private String cvFileName;
 }
