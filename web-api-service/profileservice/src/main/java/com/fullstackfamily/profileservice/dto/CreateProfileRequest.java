@@ -27,7 +27,6 @@ public class CreateProfileRequest {
     private BigDecimal expectedSalary;
 
     private EmploymentType employmentType;
-    private StatusType status;
 
     private String linkedinUrl;
     private String githubUrl;
