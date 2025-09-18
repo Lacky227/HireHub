@@ -42,6 +42,23 @@ services:
       - "hirehub-net"
     restart: always
 
+  profileservice:
+    build:
+      context: profileservice
+      dockerfile: DockerFile
+    container_name: profileservice
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/profileDB
+      SPRING_DATASOURCE_USERNAME: hubuser
+      SPRING_DATASOURCE_PASSWORD: hubpass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create-drop
+    networks:
+      - "hirehub-net"
+    restart: always
+
+
 volumes:
   pgdata:
 
